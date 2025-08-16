@@ -1,0 +1,9 @@
+image: gitpod/workspace-full
+
+tasks:
+  - name: setup-mininet
+    init: |
+      sudo apt-get update
+      sudo apt-get install -y mininet iproute2 iputils-ping iperf3 tcpdump bridge-utils iptables
+      echo "Setup finished. Open a terminal and run: sudo python3 rpl_blackhole_mininet.py --run-all"
+    command: echo "Workspace ready. Open a terminal to run your script."
